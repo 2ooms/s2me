@@ -1,0 +1,440 @@
+@charset 'utf-8';
+
+/* GENERAL ###################################################################################### */
+
+@media screen and (min-width:978px) {
+	.top-bar, #mixes {max-width:978px; display:block; margin:0 auto;}
+}
+
+
+/* NAVIGATION SECTION ########################################################################## */
+
+.navigation, .navigation .top-bar, .navigation ul, .navigation ul a, .navigation a {
+	background-color: black;
+	color: white;
+	border-top-color: white;
+	text-transform: uppercase;
+}
+.navigation li li:hover {
+	font-weight: bold;
+	color: gray;
+}
+.navigation .top-bar {
+	padding: 0 8px 0 8px;
+}
+.navigation .top-bar-title {
+	display:block; margin:0 auto;
+	padding: 12px 16px 12px 16px;
+	margin-top: 0px;
+}
+.navigation .top-bar-title button {
+	color: white;
+}
+#navigation .logo {
+	font-size: 22px;
+	font-family:Georgia, "Times New Roman", Times, serif;
+}
+.navigation .top-bar-right {
+	font-family:Verdana, Geneva, sans-serif;
+	font-size: 14px;
+	padding: 0 16px 0 16px;
+}
+.navigation .top-bar-right ul a {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.navigation .dropdown.menu > li.is-dropdown-submenu-parent > a::after {
+  border: inset 5px;
+  border-top-style: solid;
+  border-color: white transparent transparent;
+  right: 10px;
+  margin-top: -5px; 
+}
+
+
+
+/* HOME PAGE ########################################################################## */
+#home {
+	background-color: black;
+	color: white;
+	min-height: 100%;
+}
+#home {
+	padding: 5% 0 10% 0;
+}
+#home img {
+	max-width: 60%;
+	vertical-align: bottom;
+}
+#home #top-left {
+	padding-right: 5px;
+	padding-bottom: 5px;
+	text-align: right;
+}
+#home #top-right {
+	padding-left: 5px;
+	padding-bottom:  5px;
+}
+#home #bottom-left {
+	padding-top:  5px;
+	padding-right:  5px;
+	text-align: right;
+}
+#home #bottom-right {
+	padding-left:  5px;
+	padding-top:  5px;
+}
+#home .container {
+	position: relative;
+}
+#home .container h2 {
+	position: absolute;
+	color: black;
+}
+#home #top-left-text{
+	bottom: 15%;
+	right: 15%;
+}
+#home #top-right-text{
+	bottom: 15%;
+	left: 15%;
+}
+#home #bottom-left-text{
+	top: 15%;
+	right: 15%;
+}
+#home #bottom-right-text{
+	top: 15%;
+	left: 15%;
+}
+
+
+
+/* MUSIC PLAYER PAGE ################################################################################ */
+#player {
+	min-height: 1000px;
+	background-color: black;
+}
+	/* HERO SECTION ################################################################################ */
+#hero img {
+	width: 100%;
+}
+	/* MIXES SECTION ################################################################################ */
+.main {
+	background-color: black;
+	color: white;
+	padding: 40px 0 40px 0;
+	#mixes {
+		font-family:Verdana, Geneva, sans-serif;
+		h2 {
+			text-align: center;
+			margin-bottom: 10px;
+			color: white;
+		}
+		h4, h5 {
+			text-align: center;
+			margin-bottom: 0px;
+		}
+		.underline {
+			border-style: solid;
+			border-width: 0 0 1px 0;
+			border-color: white;
+			margin-bottom: 10px;
+		}
+		.cd {
+			margin-top: 10px;
+		}
+		li {
+			font-size: 10px;
+		}
+		img {
+			cursor: pointer;
+			opacity: 0.5;
+			padding: 5px;
+			border: inset 2px;
+			border-top-style: solid;
+			border-color: white;
+
+			/*transition: opacity 0.3s;*/
+		}
+	}
+}
+	/* AUDIO PLAYER SECTION ################################################################################ */
+.clearfix {
+	clear:both;
+}
+#audio-player-hyperion .row, #audio-player-dark-matter .row, #audio-player-to-sunrise .row {
+	margin-right: 0px;
+	margin-left: 0px;
+}
+#hyperion-playlist, #dark-matter-playlist, #to-sunrise-playlist {
+	display: none;
+}
+#audio-player-hyperion .expanded, #audio-player-dark-matter .expanded, #audio-player-to-sunrise .expanded {
+	width: 125%;
+}
+#audio-info {
+	text-align: center;
+	.artist {
+		font-weight: bolder;
+	}
+}
+#audio-info .artist {
+	/*font-weight: bold;*/
+}
+#audio-player .slider {
+	margin-bottom: 1.5rem;
+	margin-top: 1.5rem;
+}
+#sliderOutput2 {
+	background-color: black;
+	color: black;
+}
+#playlist {
+	list-style: none;
+	padding: 10px;
+}
+#playlist li {
+	cursor: pointer;
+	margin:5px;
+}
+#mixes #playlist li:hover {
+	font-weight: bold;
+	color: gray;
+}
+#playlist li.active {
+	font-weight: bold;
+	padding: 3px;
+	background:#666;
+}
+#tracker {
+	position: relative;
+	/*width: 100%;*/
+}
+#tracker .columns, #time-tracker .columns, #duration-shell .columns {
+	padding: 0px;
+	padding-bottom: 0px;
+	padding-top: 0px;
+}
+#progressbar {
+	cursor: pointer;
+	width: 95%;
+	height: 8px;
+	border-style: double;
+	border-radius: 5px;
+	border-color: gray;
+	border-width: 2px;
+	background-color: white;
+	float: left;
+	box-sizing: content-box;
+	margin-top: 6px;
+}
+#progress{
+	background: #1779ba;
+	height: 8px;
+	border-radius: 2px;
+	display: inline-block;
+	position: absolute;
+}
+#duration {
+	top:0;
+	/*right: 10px;*/
+	padding: 0px 8px;
+	background:#000;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius: 5px;
+}
+#playlist-button {
+	margin: 20px 0; 
+	.pull-me {
+		/*display:block;*/
+		margin: auto;
+	    width:100px;
+		font-family:Verdana, Geneva, sans-serif;
+	    -moz-border-top-left-radius:5px;
+	    -moz-border-top-right-radius:5px;
+	    border-top-left-radius:5px;
+	    border-top-right-radius:5px;
+	    h5 {
+			line-height: 0;
+			font-size: 1.0625rem;
+		}
+	}
+	ul {
+	margin-left: 0px;
+	border-style: solid;
+	border-radius: 0px;
+	border-color: #1779ba;
+	border-width: 2px;
+	margin-bottom: 0px;
+	}
+	hr {
+		margin: 0;
+		border-color: #1779ba;
+	}
+}
+	/* FOOTER SECTION ############################################################################## */
+#footer {
+	background-color: black;
+	color: #1779ba;
+	margin: 0px 0;
+	li {
+		display: inline-block;
+		margin-right: 20px;
+		float: right;
+	}
+}
+
+
+
+/* DRUM AND BASE PAGE ############################################################################## */
+#drumnbass {
+	max-width: 978px;
+	.columns {
+		padding: 0rem;
+	}
+	li {
+		font-size: 10px;
+		font-family:Verdana, Geneva, sans-serif;
+		padding-left: 0px;
+		a {
+			margin: 0px;
+			padding: 0px;
+			border: 0px;
+			color: white;
+			background-color: transparent;
+			z-index: 9999;
+		}
+		div {
+			padding: 0px;
+		}
+	}
+	h1 {
+		margin-bottom: 30px;
+	}
+	#pause {
+		display: hidden;
+	}
+	#playlist-button {
+		display: hidden;
+	}
+	.slider-dnb .columns{
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	.row {
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+	section {
+		text-align: center;
+	}
+	.button-group {
+		width: 125%;
+		.expanded {
+			display: inline-block;
+			box-sizing: auto;
+			height: auto;
+			.button {
+				display: inline-block;
+			}
+		}
+	}
+	#playlist {
+		.button, button {
+			background-color: transparent;
+			margin: 0px;
+			padding: 0px;
+			border: 0px;
+		}
+		li .track-select:hover {
+			font-weight: bold;
+			color: #1779ba;
+		}
+		li.active .track-select:hover {
+			font-weight: bold;
+			color: white;
+		}
+		li{
+			padding: 3px;
+			margin-top: 0px; 
+		}
+		li.active .right,{
+			float: right;
+		}
+		li .right {
+			float: right;
+			margin-top: 3px, 3px, 0 0;
+		}
+	}
+	#dnb-tracks {
+		margin-top: 20px;
+		thead, th, thead tr {
+			color: white;
+			text-align: center;
+			background-color: #1779ba;
+		}
+		tr {
+			/*background-color: #1779ba;*/
+			color: black;
+			ul {
+				margin: 0px;
+			}
+			.remove-button {
+				display: none;
+			}
+		}
+		td {
+			padding: 2px 4px;
+			font-size: 13px;
+			background-color: #e6e6e6;
+
+		}
+		tr > td:last-of-type {
+			max-width: 50px;
+		}
+		button {
+			border-radius: 5px;
+			padding: 3px 5px;
+			margin: 0px 0px;
+			border-style: solid;
+			border-width: 1px;
+			border-color: white;
+			background-color: #1779ba;
+			color: white;
+			font-size: 14px;
+		}
+		.center {
+			text-align: center;
+		}
+		ul {
+			display: none;
+		}
+		h3 {
+			margin-left: 10px;
+		}
+		h3 .button {
+			border: 0px;
+			padding: 0px;
+			margin: 0 0 5px 0;
+			background-color: transparent;
+		}
+	}
+}
+
+
+
+/* CONTACT PAGE ################################################################################ */
+#contact {
+	/*background-color: black;*/
+	color: white;
+	min-height: 100%;
+}
+
+
+
+
+
+
+

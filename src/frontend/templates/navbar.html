@@ -1,0 +1,50 @@
+<div class="navigation">
+        
+      <div class="title-bar" data-responsive-toggle="example-animated-menu" data-hide-for="medium">
+        <button class="menu-icon" type="button" data-toggle></button>
+        <div class="title-bar-title">2me</div>
+      </div>
+
+      <div class="top-bar" id="example-animated-menu" data-animate="hinge-in-from-top spin-out">
+        <div class="top-bar-title">
+          <strong class="logo"><a href="{% url 'home' %}">Steven 2me</a></strong>
+        </div>
+        <div id="responsive-menu">
+          <div class="top-bar-left">
+          </div>
+          <div class="top-bar-right">
+            {% url 'frontend' as frontend %}
+            {% url 'backend' as backend %}
+            {% url 'about' as about %}
+            {% url 'contact' as contact %}
+            <ul class="dropdown menu" data-dropdown-menu>
+              <li {% if request.path == frontend %} class="active" {% endif %}>
+                <a href="{% url 'frontend' %}">Front End</a>
+                <!-- <ul class="menu vertical">
+                  <li><a href="#">Agressive</a></li>
+                  <li><a href="#">Smooth</a></li>
+                  <li><a href="#">Chill</a></li>
+                </ul> -->
+              </li>
+              
+              <li {% if request.path == backend %} class="active" {% endif %}>
+                <a href="{% url 'backend' %}">Back End</a>
+                  <ul class="menu vertical">
+                    <li><a href="{% url 'backend_battleship' %}">Battleship</a></li>
+                    <!-- <li><a href="#">Smooth</a></li>
+                    <li><a href="#">Chill</a></li> -->
+                  </ul>
+              </li>
+
+              <li{% if request.path == about %} class="active" {% endif %}>
+                <a href="{% url 'about' %}">About</a>
+              </li>
+
+              <li {% if request.path == contact %} class="active" {% endif %}>
+                <a href="{% url 'contact' %}">Contact</a>
+              </li> 
+            </ul>
+          </div>
+        </div>
+      </div> 
+    </div>

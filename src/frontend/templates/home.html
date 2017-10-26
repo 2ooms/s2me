@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div id="home">
+	<div id="quarters">
+		<div class="row">
+			<div class="small-6 columns right container" id="top-left">
+				<a href="{% url 'frontend' %}">
+					<img src="https://s3-us-west-1.amazonaws.com/steven2me.com/Images/green-quarter.png" id="green-quarter">
+					<h2 id="top-left-text">Front-end<br>Projects</h2>
+					<!-- {% load static %}
+					<img src="{% static "media/img/green-quarter.png" %}" alt="Green Quarter"/> -->
+				</a>
+			</div>
+			<div class="small-6 columns container" id="top-right">
+				<a href="{% url 'backend' %}">
+					<img src="https://s3-us-west-1.amazonaws.com/steven2me.com/Images/red-quarter.png" id="red-quarter">
+					<h2 id="top-right-text">Back-end<br>Projects</h2>
+				</a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="small-6 columns right container" id="bottom-left">
+				<a href="{% url 'about' %}">
+					<img src="https://s3-us-west-1.amazonaws.com/steven2me.com/Images/yellow-quarter.png" id="yellow-quarter">
+					<h2 id="bottom-left-text">About</h2>
+				</a>
+			</div>
+			<div class="small-6 columns container" id="bottom-right">
+				<a href="#">
+					<img src="https://s3-us-west-1.amazonaws.com/steven2me.com/Images/blue-quarter.png" id="blue-quarter">
+					<h2 id="bottom-right-text">Contact</h2>
+				</a>
+			</div>
+		</div>
+	</div>
+
+</div>
+  
+{% endblock %}
